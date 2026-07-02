@@ -12,10 +12,10 @@ public class Rotator : MonoBehaviour
     private void OnValidate()
     {
         if (_startRotate == Vector3.zero)
-            _startRotate = transform.eulerAngles;
+            _startRotate = transform.localEulerAngles;
 
         if (_endRotate == Vector3.zero)
-            _endRotate = transform.eulerAngles + new Vector3(0f, 180f, 0f);
+            _endRotate = transform.localEulerAngles + new Vector3(0f, 180f, 0f);
     }
 
     private void Start()
